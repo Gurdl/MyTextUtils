@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 // import InputColor from 'react-input-color';
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function Navbar(props) {
   return (
     <nav
@@ -25,15 +25,15 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <link className="nav-link" to="/">
                 Home
-              </a>
+              </link>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/About">
                 About
               </Link>
-            </li> */}
+            </li>
           </ul>
         </div>
       </div>
