@@ -8,9 +8,9 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.myMode} bg-${props.myMode}`}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="#">
           {props.title}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -25,9 +25,9 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <link className="nav-link" to="/">
+              <Link className="nav-link" to="/">
                 Home
-              </link>
+              </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/About">
