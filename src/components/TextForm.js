@@ -74,7 +74,7 @@ export default function TextForm(props)
         <textarea 
           className="form-control" value={text}
           onChange={handleOnChange}
-          style={{backgroundColor:props.myMode==='dark'?'gray':'white',color:props.myMode==='dark'?'white':'black'}}
+          style={{backgroundColor:props.myMode==='dark'?'#042743':'white',color:props.myMode==='dark'?'white':'black'}}
           id="myBoxId"
           rows="5"
         ></textarea>
@@ -87,7 +87,7 @@ export default function TextForm(props)
       </div>
       <div className="container my-1"  style={{color:props.myMode==='dark'?'white':'#042743'}}>
         <h2>Your text summary</h2>
-        <p>  {text.split(" ").length}:words and {text.length}:characters</p>
+        <p>  {text.split(" ").filter((txt)=>{return txt.length!==0}).length}:words and {text.length}:characters</p>
         <p> {0.008*text.split(" ").length} min, Average time to read words</p>
         <h3>Preview</h3>
         <p>{text.length>0?text:"Write some text above, to preview"}</p>

@@ -56,7 +56,7 @@ function App()
     <Navbar initial={initial} color={color} setColor={setColor}title="textUtils" myMode={mode} toggle={toggleDarkMode} txt={txtMode}></Navbar>
    <Alert alert={alert}></Alert>
     <Routes>
-        <Route exact path="/About" element={<About />} />
+        <Route exact path="/About" element={<About  myMode={mode}/>} />
         <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Write Your Text here:"  myMode={mode}></TextForm>} />
         
     </Routes>
